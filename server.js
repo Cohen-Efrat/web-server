@@ -34,18 +34,21 @@ hbs.registerHelper('screamIt',(text)=>{
   //return text.toUpperCase();
 });
 app.get('/',(req,res)=>{
-
   res.render('home.hbs',{
     pageTitle:'Home page',
     wellcome:" welcome to my site"
   })
 });
-
+  
 app.get('/about',(req,res)=>{
   //  res.send('about page');
   res.render('about.hbs',{
     pageTitle:'About page',
-
+  });
+});
+app.get('/projects',(req,res)=>{
+  res.render('projects.hbs',{
+    pageTitle:'projects page',
   });
 });
 
